@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_flight_ticketInformation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:visibility="visible">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:text="Chiều đi"/>
+    <ImageView
+        android:id="@+id/icon_circle"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/textView"
+        android:background="@drawable/baseline_radio_button_unchecked_24" />
+
+    <View
+        android:id="@+id/dottedLine"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/icon_circle1"
+        android:layout_below="@id/icon_circle"
+        android:layout_alignStart="@id/icon_circle"
+        android:layout_alignEnd="@id/icon_circle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="-17dp"
+        android:background="@drawable/dash_line" />
+
+    <ImageView
+        android:id="@+id/icon_circle1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+
+        android:layout_below="@id/txtFlightNumber"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/baseline_radio_button_unchecked_24" />
+
+    <TextView
+        android:id="@+id/txtDepartureDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:layout_below="@id/textView"
+        android:text="16/01/2024 06:40"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtDepartureCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDepartureDay"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="SGN"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDepartureCode"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="Hồ Chí Minh"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtSumTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCity"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="1 tiếng 20 phút"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtFlightNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSumTime1"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="VN1340"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtArrivalDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFlightNumber"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="16/01/2024 06:40"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtArrivalCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtArrivalDay"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="HAN"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtCity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtArrivalCode"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/icon_circle"
+        android:text="Hà Nôi"
+        android:textSize="17sp" />
+</RelativeLayout>

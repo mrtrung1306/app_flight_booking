@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentOneWay">
+
+    <RelativeLayout
+        android:id="@+id/departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtdeparture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Điểm khởi hành"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtAirportCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdeparture"
+            android:layout_marginLeft="5dp"
+            android:text="sgn"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAirportCode"
+            android:layout_marginLeft="5dp"
+            android:text="TP Hồ Chí Minh"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgAirportIcon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtdeparture"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@id/txtAirportCode"
+            android:background="@android:drawable/ic_menu_edit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/arrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/departure">
+
+        <TextView
+            android:id="@+id/txtarrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Điểm đến"
+            android:textSize="10sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtAirportCode1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/txtarrival"
+            android:text="han"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtCity1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAirportCode1"
+            android:layout_marginLeft="5dp"
+            android:text="TP Hà Nội"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/imgAirportIcon1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtarrival"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@id/txtAirportCode1"
+            android:background="@android:drawable/ic_menu_edit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/departureday"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/rounded_border">
+
+        <TextView
+            android:id="@+id/txtdepartureday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Ngày đi"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtdepartureday1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdepartureday"
+            android:text="+"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/imgdeparturedayIcon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:drawable/ic_menu_edit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutPassenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/arrival"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@android:drawable/divider_horizontal_dark">
+
+        <TextView
+            android:id="@+id/txtPassenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Hành Khách"
+            android:textAllCaps="true"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtPassenger1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPassenger"
+            android:layout_marginLeft="5dp"
+            android:text="1"
+            android:textSize="40dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtPassenger2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPassenger"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/txtPassenger1"
+            android:text="hành khách"
+            android:textSize="15dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtPassenger3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPassenger2"
+            android:layout_toEndOf="@id/txtPassenger1"
+            android:layout_marginStart="5dp"
+            android:text="Người lớn"
+            android:textSize="15dp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/imgPassengerIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/baseline_arrow_drop_down_24" />
+
+    </RelativeLayout>
+</RelativeLayout>

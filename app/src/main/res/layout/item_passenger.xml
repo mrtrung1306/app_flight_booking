@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayoutPassenger"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rltInformationPassenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hành khách 1- người lớn"
+            android:textColor="#8A8484"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/iconAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/baseline_add_circle_outline_24" />
+            <TextView
+                android:id="@+id/txtPassenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iconAdd"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Nhập thông tin"
+                android:textColor="#FF8C00"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

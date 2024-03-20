@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0E7FA"
+    tools:context=".PassengerInformationActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_header">
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Thời gian chuyến đi"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/btnExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/baseline_close_24"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rltLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="#ffff">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng cộng:"
+                android:textColor="#8A8484"/>
+            <TextView
+                android:id="@+id/txtFareAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview"
+                android:text="1,692,200 VND"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:textSize="25sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rltlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rltLayout"
+        android:background="@drawable/search_view"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <RelativeLayout
+            android:id="@+id/rltLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iconUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="null"
+                android:background="@drawable/baseline_group_24" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconUser"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Thông tin khách hàng"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <View
+                android:id="@+id/border"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/iconUser"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dashed_border"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rltLayout2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rltlayout1"
+        android:background="@drawable/search_view"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <RelativeLayout
+            android:id="@+id/rltLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iconUser1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="null"
+                android:background="@drawable/baseline_event_seat_24" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconUser1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Chỗ ngồi"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <View
+                android:id="@+id/border1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/iconUser1"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dashed_border"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rltLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rltLayout3"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp">
+            <RelativeLayout
+                android:id="@+id/rltLayout4.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtDepartureCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGN"/>
+                <TextView
+                    android:id= "@+id/textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtDepartureCode"
+                    android:text=" | "
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtDepartureCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textview2"
+                    android:text="Hồ Chí Minh"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rltLayout4.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/rltLayout4.1">
+                <TextView
+                    android:id="@+id/dashed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.1"
+                    android:text="------------"
+                    android:textColor="#B0B0B0"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/imgAirportIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignBottom="@id/dashed"
+                    android:layout_marginBottom="1dp"
+                    android:layout_toEndOf="@id/dashed"
+                    android:background="@drawable/baseline_flight_24"
+                    android:backgroundTint="@color/black"
+                    android:rotation="90" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/rltLayout4.2">
+                <TextView
+                    android:id="@+id/txtArrivalCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGN"/>
+                <TextView
+                    android:id= "@+id/textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtArrivalCode"
+                    android:text=" | "
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtArrivalCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textview4"
+                    android:text=" Hồ Chí Minh"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:id="@+id/border2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/rltLayout4"
+            android:background="@android:drawable/dark_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rltLayout4"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:id="@+id/rltLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcvSeat"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone">
+            <RelativeLayout
+                android:id="@+id/rltLayout5.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtDepartureCodeReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGN"/>
+                <TextView
+                    android:id= "@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtDepartureCodeReturn"
+                    android:text=" | "
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtDepartureCityReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textview1"
+                    android:text="Hồ Chí Minh"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rltLayout5.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/rltLayout5.1">
+                <TextView
+                    android:id="@+id/dashed1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.1"
+                    android:text="------------"
+                    android:textColor="#B0B0B0"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/imgAirportIcon1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignBottom="@id/dashed1"
+                    android:layout_marginBottom="1dp"
+                    android:layout_toEndOf="@id/dashed1"
+                    android:background="@drawable/baseline_flight_24"
+                    android:backgroundTint="@color/black"
+                    android:rotation="90" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/rltLayout5.2">
+                <TextView
+                    android:id="@+id/txtArrivalCodeReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGN"/>
+                <TextView
+                    android:id= "@+id/textview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtArrivalCodeReturn"
+                    android:text=" | "
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtArrivalCityReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textview3"
+                    android:text=" Hồ Chí Minh"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:id="@+id/border3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/rltLayout5"
+            android:background="@android:drawable/dark_header"
+            android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvSeatReturn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rltLayout5"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layoutBtnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/orange"
+            android:text="Thanh toán"
+            android:textColor="@color/white"
+            app:cornerRadius="15dp" />
+    </RelativeLayout>
+</RelativeLayout>
